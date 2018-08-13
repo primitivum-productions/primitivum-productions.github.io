@@ -1,0 +1,13 @@
+main:
+  - title: "Home"
+    text: "&Alpha;"
+    url: /
+  - title: "Releases"
+    text: "𝕽𝖊𝖑𝖊𝖆𝖘𝖊𝖘"
+    url: /releases
+  - title: "Distro"
+    text: "𝕯𝖎𝖘𝖙𝖗𝖔"
+    url: /distro
+  # - title: "Rip-Off"
+  # - title: "Links"
+

@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /releases
+---
+
+<ul class="releases-list">
+{%- for release in site.data.releases %}
+  {%- if release.band != empty %}
+  <li>
+    {%- if release.image %}
+    <img src="{{ site.baseurl }}/assets/images/releases/{{ release.image }}" alt="">
+    {% else %}
+    <div class="release-no-image"></div>
+    {% endif -%}
+
+    <p>{{ release.catalog_id }}</p>
+    <p>{{ release.band }} - {{ release.title }} ({{ release.year}})</p>
+    <p>{{ release.info | newline_to_br }}</p>
+
+    {%- if release.listen_url %}
+    <a href="{{ release.listen_url }}" rel="noopener noreferrer" target="_blank">Listen</a>
+    {%- endif %}
+  </li>
+  {%- endif -%}
+{% endfor %}
+</ul>

@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /distro
+---
+
+{%- assign rls = site.data.distro | where: "Label", "Primitivum Productions" -%}
+{%- assign cds = site.data.distro | where: "Formato", "CD" | sort: 'Artista' -%}
+{%- assign cdrs = site.data.distro | where: "Formato", "CD-R" | sort: 'Artista' -%}
+{%- assign tps = site.data.distro | where: "Formato", "TAPE" | sort: 'Artista' -%}
+{%- assign dvds = site.data.distro | where: "Formato", "DVD" | sort: 'Artista' -%}
+{%- assign dvdrs = site.data.distro | where: "Formato", "DVD-R" | sort: 'Artista' -%}
+
+<div class="intro-text">
+  <p>Please send your order to</p>
+  <p>{{ site.email }}</p>
+</div>
+
+{% include distro-section.html title="𝕻𝖗𝖎𝖒𝖎𝖙𝖎𝖛𝖚𝖒 𝕻𝖗𝖔𝖉𝖚𝖈𝖙𝖎𝖔𝖓𝖘 𝕽𝖊𝖑𝖊𝖆𝖘𝖊𝖘" data=rls rl=true open=true %}
+{% include distro-section.html title="𝕮𝖔𝖒𝖕𝖆𝖈𝖙 𝕯𝖎𝖘𝖈𝖘" data=cds %}
+{% include distro-section.html title="𝕮𝕯-𝕽" data=cdrs %}
+{% include distro-section.html title="𝕿𝖆𝖕𝖊𝖘" data=tps %}
+{% include distro-section.html title="𝕯𝖎𝖌𝖎𝖙𝖆𝖑 𝖁𝖎𝖉𝖊𝖔 𝕯𝖎𝖘𝖈𝖘" data=dvds %}
+{% include distro-section.html title="𝕯𝖁𝕯-𝕽" data=dvdrs %}
+

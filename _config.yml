@@ -1,0 +1,13 @@
+baseurl: ""
+email: uschtenheim at hotmail dot com
+title: "Primitivum Productions"
+description: "Keep the Old Flame Alive"
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

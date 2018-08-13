@@ -1,0 +1,40 @@
+<details {% if include.open %}open{% endif %}>
+  <summary class="bf">{{ include.title }} ({{ include.data.size }})</summary>
+  <ul>
+    {%- assign rl = include.rl -%}
+    {% for item in include.data %}
+    <li>
+        {%- assign format = item['Formato'] -%}
+        {%- assign artist = item['Artista'] -%}
+        {%- assign country = item['País'] | remove: '-' | default: nil -%}
+        {%- assign album = item['Album'] -%}
+        {%- assign year = item['Año'] | plus: 0 -%}
+        {%- assign label = item['Label'] | remove: '?' -%}
+        {%- assign mxn = item['MXN'] -%}
+        {%- assign usd = item['USD'] -%}
+        {%- assign qty = item['Qty'] | plus: 0 -%}
+
+        <span>{{- artist -}}
+        {%- if country %} ({{ country }}){%- endif -%}
+        </span>{{ ' - ' }}
+        <span>{{- album -}}
+        {%- if year > 0 %} ({{ year }}){%- endif -%}
+        </span>{{ ' - ' }}
+
+        {%- if rl -%}
+        <span>{{- format -}}</span>
+        {%- else -%}
+          {%- if label != empty -%}
+          <span>{{- label -}}</span>
+          {%- endif -%}
+        {%- endif -%}
+        {{- ' - ' -}}
+        <span class="price">{{ mxn }}MXN / {{ usd }}USD</span>
+        {%- if qty == 1 -%}
+          {{ ' - ' }}<span class="copies last">LAST COPY</span>
+        {% else %}
+          {{ ' - ' }}<span class="copies">{{ qty }} COPIES</span>
+        {%- endif -%}
+    </li>{% endfor %}
+  </ul>
+</details>

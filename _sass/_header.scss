@@ -1,0 +1,52 @@
+header {
+
+  .header-link {
+    display: inline-block;
+
+    &-image {
+      display: inherit;
+      vertical-align: top;
+      max-width: 460px;
+    }
+  }
+
+  > h1 {
+    > img {
+    }
+  }
+
+  > nav {
+    color: darken($color-fg, 60%);
+    padding: 3rem 0;
+
+    > ul {
+      > li {
+        display: inline-block;
+        vertical-align: top;
+
+        &:not(:last-child)::after {
+          content: '·';
+        }
+
+        &:nth-child(even) {
+          transform: rotate(1deg);
+        }
+
+        &:nth-child(odd) {
+          transform: rotate(-1deg);
+        }
+
+        >  a {
+          display: inline-block;
+          padding: 0 .5em;
+          color: white;
+        }
+
+        &.active > a {
+          background-color: $color-primary;
+          color: $color-bg;
+        }
+      }
+    }
+  }
+}

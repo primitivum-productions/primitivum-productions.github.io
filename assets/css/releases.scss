@@ -1,0 +1,26 @@
+---
+---
+
+@import "base";
+@import "header";
+@import "footer";
+
+ul.releases-list {
+  padding-top: 1rem;
+  list-style: none;
+
+  li {
+    padding-bottom: 3rem;
+  }
+
+  .release-no-image {
+    height: 100px;
+    background: lighten($color-bg, 10%);
+  }
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+

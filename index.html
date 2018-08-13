@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: /
+links:
+  - text: "𝕯𝖎𝖘𝖈𝖔𝖌𝖘"
+    title: "Discogs"
+    url: https://www.discogs.com/seller/Primitivum/profile
+  - text: "𝕱𝖆𝖈𝖊𝖇𝖔𝖔𝖐"
+    title: "Facebook"
+    url: https://www.facebook.com/Primitivum-Productions-121433721363611/
+---
+
+<img class="home-logo" src="{{ site.baseurl }}assets/images/home/logo.jpg">
+<ul class="home-links">
+{% for link in page.links %}
+<li>
+  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.title }}">{{ link.text }}</a>
+</li>
+{% endfor %}
+</ul>

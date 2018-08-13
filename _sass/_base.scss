@@ -1,0 +1,55 @@
+$color-bg: #000;
+$color-fg: #fafafa;
+$color-primary: crimson;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.618;
+  background-color: $color-bg;
+  color: $color-fg;
+}
+
+::selection {
+  background-color: rgba(237, 20, 61, .35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(237, 20, 61, .7);
+}
+
+body {
+  padding: 1.5rem;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &[target="_blank"]::after {
+    content: "\021D7";
+    padding-left: .5em;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.bf {
+  font-size: 1.23rem;
+}

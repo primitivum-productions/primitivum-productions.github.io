@@ -1,0 +1,67 @@
+---
+---
+
+@import "base";
+@import "header";
+@import "footer";
+
+.intro-text {
+  padding-bottom: 2rem;
+}
+
+details {
+  padding-bottom: .5rem;
+}
+
+details > ul {
+  counter-reset: items;
+  padding: .5rem 0;
+  list-style: none;
+}
+
+details > ul > li {
+  &::before {
+    counter-increment: items;
+    content: counter(items) ".";
+    opacity: .75;
+    padding-right: .25em;
+  }
+
+  &:nth-child(odd) {
+    & > span:nth-child(odd) {
+      transform: rotate(-1deg);
+    }
+    & > span:nth-child(even) {
+      transform: rotate(1deg);
+    }
+  }
+
+  &:nth-child(even) {
+    & > span:nth-child(odd) {
+      transform: rotate(1deg);
+    }
+    & > span:nth-child(even) {
+      transform: rotate(-1deg);
+    }
+  }
+
+  & > span {
+    display: inline-block;
+  }
+
+}
+
+details > summary {
+  outline: none;
+  cursor: pointer;
+}
+
+.price,
+.copies {
+  font-size: .85rem;
+  opacity: .75;
+}
+
+.copies.last {
+  color: $color-primary;
+}
