@@ -6,7 +6,7 @@
 @import "footer";
 
 .intro-text {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 details {
@@ -20,6 +20,8 @@ details > ul {
 }
 
 details > ul > li {
+  padding-bottom: .75rem;
+
   &::before {
     counter-increment: items;
     content: counter(items) ".";
@@ -29,19 +31,19 @@ details > ul > li {
 
   &:nth-child(odd) {
     & > span:nth-child(odd) {
-      transform: rotate(-1deg);
+      transform: rotate(-.1deg);
     }
     & > span:nth-child(even) {
-      transform: rotate(1deg);
+      transform: rotate(.1deg);
     }
   }
 
   &:nth-child(even) {
     & > span:nth-child(odd) {
-      transform: rotate(1deg);
+      transform: rotate(.1deg);
     }
     & > span:nth-child(even) {
-      transform: rotate(-1deg);
+      transform: rotate(-.1deg);
     }
   }
 
@@ -56,12 +58,6 @@ details > summary {
   cursor: pointer;
 }
 
-.price,
-.copies {
-  font-size: .85rem;
-  opacity: .75;
-}
-
-.copies.last {
+.last-copy {
   color: $color-primary;
 }

@@ -15,7 +15,7 @@ permalink: /releases
 
     <p>{{ release.catalog_id }}</p>
     <p>{{ release.band }} - {{ release.title }} ({{ release.year}})</p>
-    <p>{{ release.info | newline_to_br }}</p>
+    <p class="sf lt">{{ release.info | newline_to_br }}</p>
 
     {%- if release.listen_url %}
     <a href="{{ release.listen_url }}" rel="noopener noreferrer" target="_blank">Listen</a>

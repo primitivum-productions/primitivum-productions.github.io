@@ -16,24 +16,26 @@
 
         <span>{{- artist -}}
         {%- if country %} ({{ country }}){%- endif -%}
-        </span>{{ ' - ' }}
+        </span>{{- ' - ' -}}
         <span>{{- album -}}
         {%- if year > 0 %} ({{ year }}){%- endif -%}
-        </span>{{ ' - ' }}
+        </span>
+
+        <br>
 
         {%- if rl -%}
-        <span>{{- format -}}</span>
+        <span class="sf lt">{{- format -}}</span>
         {%- else -%}
           {%- if label != empty -%}
-          <span>{{- label -}}</span>
+          <span class="sf lt">{{- label -}}</span>
           {%- endif -%}
         {%- endif -%}
         {{- ' - ' -}}
-        <span class="price">{{ mxn }}MXN / {{ usd }}USD</span>
+        <span class="sf lt">{{ mxn }}MXN {{ usd }}USD</span>
         {%- if qty == 1 -%}
-          {{ ' - ' }}<span class="copies last">LAST COPY</span>
+          {{- ' - ' -}}<span class="sf last-copy">LAST COPY</span>
         {% else %}
-          {{ ' - ' }}<span class="copies">{{ qty }} COPIES</span>
+          {{- ' - ' -}}<span class="sf lt">{{ qty }} COPIES</span>
         {%- endif -%}
     </li>{% endfor %}
   </ul>
