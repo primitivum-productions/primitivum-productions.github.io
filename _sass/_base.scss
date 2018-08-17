@@ -17,7 +17,7 @@ $color-primary: crimson;
 }
 
 ::selection {
-  background-color: rgba(237, 20, 61, .35);
+  background-color: rgba($color-primary, .35);
   color: #fff;
 }
 
@@ -27,7 +27,7 @@ $color-primary: crimson;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(237, 20, 61, .7);
+  background-color: rgba($color-primary, .7);
 }
 
 body {
